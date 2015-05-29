@@ -1,18 +1,19 @@
 <html>
     <head>
         <title>html5 donut</title>
-        <script type="text/javascript" src="http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js"></script> <script type="text/coffeescript">
+        <script type="text/javascript" src="http://coffeescript.org/extras/coffee-script.js"></script>
+        <script type="text/coffeescript">
             canvas = document.getElementById "canvas"
             ctx = canvas.getContext("2d")
 
             center =
-            x: Math.floor(canvas.width / 2)
-            y: Math.floor(canvas.height / 2)
+                x: Math.floor(canvas.width / 2)
+                y: Math.floor(canvas.height / 2)
             radius = Math.min(center.x, center.y)
 
             data = [
-            {color: 'blue', percent: 70.0}
-            {color: 'red', percent: 30.0}
+                {color: 'blue', percent: 70.0}
+                {color: 'red', percent: 30.0}
             ]
             degreesToRadian = (degrees) ->
                 degrees * Math.PI / 180
