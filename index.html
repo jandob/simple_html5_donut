@@ -40,6 +40,7 @@
             ctx.beginPath()
             ctx.moveTo(center.x, center.y)
             ctx.arc center.x, center.y, radius * .60, 0, 2 * Math.PI, false
+            ctx.globalCompositeOperation = 'destination-out'
             ctx.stroke()
             ctx.clip()
             ctx.clearRect 0, 0, canvas.width, canvas.height
